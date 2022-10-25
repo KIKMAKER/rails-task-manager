@@ -1,0 +1,11 @@
+<h2>Edit <%= @task.title.upcase %></h2>
+
+<%= form_with model: @task do |t| %>
+<%= t.label :title %>
+<%= t.text_field :title %>
+<%= t.label :details %>
+<%= t.text_field :details %>
+<%= check_box_tag(:completed, true) %>
+<%= label_tag(:completed, "Done") %>
+<%= t.submit %>
+<% end %>
